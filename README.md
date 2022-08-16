@@ -1,5 +1,3 @@
-# newsletter-api
-
 Api simples para cadastro de usuários em uma newsletter
 
 ### Stack utilizada:
