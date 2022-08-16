@@ -1,4 +1,5 @@
 # newsletter-api
+
 Api simples para cadastro de usuários em uma newsletter
 
 ### Stack utilizada:
@@ -8,6 +9,7 @@ Api simples para cadastro de usuários em uma newsletter
 ![MongoDB](https://img.shields.io/badge/-MongoDB-black?style=flat-square&logo=mongodb)
 
 User
+
 ```{
 		name: String,
 		email: {
@@ -19,8 +21,10 @@ User
 			default: true,
 		},
 	},
-  ```
+```
+
 Unsub
+
 ```{
 		userId: {
 			type: mongoose.Schema.Types.ObjectId,
@@ -28,12 +32,12 @@ Unsub
 		},
 		reason: String,
 	},
-  ```
+```
 
 Rotas:
 <br><br>
 `POST: /user` Adiciona um novo usuário para a collection de usuários
 <br><br>
-`POST: /user/unsubscribe` Altera o valor de subscribed para false e cria um novo registro na collection de unsubs, com o _id do usuário e um possível motivo para o descadastramento da newsletter.
+`POST: /user/unsubscribe` Altera o valor de subscribed para false e cria um novo registro na collection de unsubs, com o \_id do usuário e um possível motivo para o descadastramento da newsletter.
 <br><br>
-`GET: /user` Lista todos os usuários cadastrados
+`GET: /user` Lista todos os usuários que estão inscritos na newsletter (subscribed === true)
